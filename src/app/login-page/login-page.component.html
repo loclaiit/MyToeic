@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="searchrow row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="panel-title text-center">
+          <strong>Access by Token</strong>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12"></div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="text" maxlength="25" runat="server" [(ngModel)]="userId" class="form-control" id="tbUserId"
+                placeholder="User Name" />
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" [(ngModel)]="userToken" runat="server" class="form-control"
+                id="tbtoken" placeholder="Token" maxlength="25">
+                <button id="btnLogin" runat="server" class="btn btn-primary" (click)="Click_Access()">Access</button>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="isInvalid" class="alert alert-danger text-center" role="alert">
+          {{messageTxt}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,217 @@
+<div class="row sheet-container" *ngIf="this.sheet">
+  <div class="sheet-detail col-md-10 offset-md-1">
+    <!-- Header contains Audio/Picture/Reading text -->
+    <div class="sheet-header col-md-10 offset-md-1">
+      <app-sheet-header ContentSource="{{this.sheet.ContentSrc || this.sheet.InnerHTMLContent}}" *ngIf="sheet.Questions.length > 0"></app-sheet-header>
+    </div>
+    <!-- body contains Questions and Answer options -->
+    <div class="body">
+      <div class="questions part-1" *ngIf="part == 1">
+        <div class="question" *ngFor="let q of this.sheet.Questions; index as i">
+          <img class="question-img col-md-8 offset-md-2" src="{{q.QuestionContent}}">
+          <div class="answer col-md-8 offset-md-2">
+            <div class="row">
+              <div class="question-content">
+                <div class="question-number">{{q.SortOrder + '.'}}</div>&nbsp;Select the answer
+              </div>
+            </div>
+            <ul>
+              <li class="li-answer">
+                <div class="form-check">
+                  <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='A'" (click)="q.ChoosenAnswer='A'" [name]="'answer' + i" [id]="'answerA_'+i">
+                  <label class="form-check-label" [for]="'answerA_'+i">
+                    {{q.AnswerA}}
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='B'" (click)="q.ChoosenAnswer='B'" [name]="'answer' + i" [id]="'answerB_'+i">
+                  <label class="form-check-label" [for]="'answerB_'+i">
+                    {{q.AnswerB}}
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='C'" (click)="q.ChoosenAnswer='C'" [name]="'answer' + i" [id]="'answerC_'+i">
+                  <label class="form-check-label" [for]="'answerC_'+i">
+                    {{q.AnswerC}}
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='D'" (click)="q.ChoosenAnswer='D'" [name]="'answer' + i" [id]="'answerD_'+i">
+                  <label class="form-check-label" [for]="'answerD_'+i">
+                    {{q.AnswerD}}
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="questions part-2" *ngIf="part == 2">
+        <div class="question col-md-3 offset-md-1" *ngFor="let q as Question of this.sheet.Questions; index as i">
+          <div class="row">
+            <div class="question-content col-md-6">
+               <div class="question-number">{{q.SortOrder + '. '}}</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="answer col-md-12">
+              <ul>
+                <li class="li-answer">
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='A'" (click)="q.ChoosenAnswer='A'" [name]="'answer' + i" [id]="'answerA_'+i">
+                    <label class="form-check-label" [for]="'answerA_'+i">
+                      {{q.AnswerA}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='B'" (click)="q.ChoosenAnswer='B'" [name]="'answer' + i" [id]="'answerB_'+i">
+                    <label class="form-check-label" [for]="'answerB_'+i">
+                      {{q.AnswerB}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='C'" (click)="q.ChoosenAnswer='C'" [name]="'answer' + i" [id]="'answerC_'+i">
+                    <label class="form-check-label" [for]="'answerC_'+i">
+                      {{q.AnswerC}}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="questions part-3" *ngIf="part == 3">
+        <div class="question col-md-10 offset-md-1" *ngFor="let q as Question of this.sheet.Questions; index as i">
+          <div class="row">
+            <div class="question-content col-md-12">
+               <div class="question-number">{{q.SortOrder + '.'}}</div>&nbsp;{{q.QuestionContent}}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="answer col-md-12">
+              <ul>
+                <li class="li-answer">
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='A'" (click)="q.ChoosenAnswer='A'" [name]="'answer' + i" [id]="'answerA_'+i">
+                    <label class="form-check-label" [for]="'answerA_'+i">
+                      {{q.AnswerA}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='B'" (click)="q.ChoosenAnswer='B'" [name]="'answer' + i" [id]="'answerB_'+i">
+                    <label class="form-check-label" [for]="'answerB_'+i">
+                      {{q.AnswerB}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='C'" (click)="q.ChoosenAnswer='C'" [name]="'answer' + i" [id]="'answerC_'+i">
+                    <label class="form-check-label" [for]="'answerC_'+i">
+                      {{q.AnswerC}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='D'" (click)="q.ChoosenAnswer='D'" [name]="'answer' + i" [id]="'answerD_'+i">
+                    <label class="form-check-label" [for]="'answerD_'+i">
+                      {{q.AnswerD}}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="questions part-4" *ngIf="part == 4 || part == 5">
+        <div class="question col-md-10 offset-md-1" *ngFor="let q as Question of this.sheet.Questions; index as i">
+          <div class="row">
+            <div class="question-content col-md-12">
+               <div class="question-number">{{q.SortOrder + '.'}}&nbsp;</div>{{q.QuestionContent}}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="answer col-md-12">
+              <ul>
+                <li class="li-answer">
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='A'" (click)="q.ChoosenAnswer='A'" [name]="'answer' + i" [id]="'answerA_'+i">
+                    <label class="form-check-label" [for]="'answerA_'+i">
+                      {{q.AnswerA}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='B'" (click)="q.ChoosenAnswer='B'" [name]="'answer' + i" [id]="'answerB_'+i">
+                    <label class="form-check-label" [for]="'answerB_'+i">
+                      {{q.AnswerB}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='C'" (click)="q.ChoosenAnswer='C'" [name]="'answer' + i" [id]="'answerC_'+i">
+                    <label class="form-check-label" [for]="'answerC_'+i">
+                      {{q.AnswerC}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='D'" (click)="q.ChoosenAnswer='D'" [name]="'answer' + i" [id]="'answerD_'+i">
+                    <label class="form-check-label" [for]="'answerD_'+i">
+                      {{q.AnswerD}}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="questions part-6" *ngIf="part == 6 || part == 7">
+        <div class="question col-md-10 offset-md-1" *ngFor="let q as Question of this.sheet.Questions; index as i">
+          <div class="row">
+            <div class="question-content col-md-12">
+               <div class="question-number">{{q.SortOrder + '.'}}&nbsp;</div>{{q.QuestionContent}}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="answer col-md-12">
+              <ul>
+                <li class="li-answer">
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='A'" (click)="q.ChoosenAnswer='A'" [name]="'answer' + i" [id]="'answerA_'+i">
+                    <label class="form-check-label" [for]="'answerA_'+i">
+                      {{q.AnswerA}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='B'" (click)="q.ChoosenAnswer='B'" [name]="'answer' + i" [id]="'answerB_'+i">
+                    <label class="form-check-label" [for]="'answerB_'+i">
+                      {{q.AnswerB}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='C'" (click)="q.ChoosenAnswer='C'" [name]="'answer' + i" [id]="'answerC_'+i">
+                    <label class="form-check-label" [for]="'answerC_'+i">
+                      {{q.AnswerC}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" class="my-auto" [checked]="q.ChoosenAnswer=='D'" (click)="q.ChoosenAnswer='D'" [name]="'answer' + i" [id]="'answerD_'+i">
+                    <label class="form-check-label" [for]="'answerD_'+i">
+                      {{q.AnswerD}}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer contains page number and Next button -->
+    <div class="footer">
+      <app-sheet-footer></app-sheet-footer>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+@import '../../assets/styles/variable';
+
+.sheet-header{
+  padding-top: 20px;
+}
+.sheet-detail{
+  background-color: #fff;
+  max-width: 100vw;
+  box-shadow: 0 0 2px 1px rgba($color: #000000, $alpha: 0.2);
+  //height: 100vh;
+}
+.sheet-container{
+  background-color: #ccc;
+  height: 100vh;
+  padding-top: 30px;
+}
+.part-2 .question{
+  display: inline-block;
+}
+.part-5 .question{
+  display: inline-block;
+}
+// .questions.part-1{
+//   text-align: center;
+// }
+
+// .question-img{
+//   width: 80%;
+//   padding: 10px 0px;
+// }
+.question-content{
+  display: inherit;
+  font-weight: bold;
+  text-align: left;
+  line-height: 40px;
+}
+.question-number{
+  margin-left: 10px;
+  color: $main-color;
+}
+.li-answer{
+  // margin-left: 10%;
+  overflow: hidden;
+  text-align: left;
+}
+
+.form-check{
+  display: flex;
+  align-items: flex-end;
+  line-height: 30px;
+}
+.form-check-label{
+  padding-left: 15px;
+  margin-bottom: 2px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+}
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  // transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em $main-color;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}

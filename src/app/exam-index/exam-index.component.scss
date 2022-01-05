@@ -1,0 +1,24 @@
+@import '../../assets/styles/variable';
+.im{
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.exam-container{
+  top: 10px;
+  background-color: rgba($color: white, $alpha: 0.2);
+  border-radius: 20px;
+}
+
+tr{
+  border-bottom: 1px solid #FFF;
+}
+.row{
+  margin: 10px 0;
+}
+
+.exam-index{
+  background-color: $main-color;
+  color: white;
+  border-radius: 15px;
+}

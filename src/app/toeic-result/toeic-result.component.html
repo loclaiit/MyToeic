@@ -1,0 +1,90 @@
+<div class="result-container">
+  <div class="result-header">
+    <div class="logo">
+      <div class="text">
+        TOEIC
+      </div>
+    </div>
+    <div class="title">
+      <h2>
+        LISTENING AND READING
+      </h2>
+      <h1>
+        OFFICIAL SCORE CERTIFICATE
+      </h1>
+    </div>
+  </div>
+  <div class="row result-row">
+    <div class="avatar col-md-2">
+      <i class="im im-user-male"></i>
+      <div class="slogan">KNOW ENGLISH.</div>
+      <div class="slogan">KNOW SUCCESS.</div>
+    </div>
+    <div class="cell col-md-10">
+      <div class="container result-body">
+        <div class="candidate">
+          <h2>{{userInfo.FirstName + ' ' + userInfo.LastName}}</h2>
+        </div>
+        <div class="name">Name</div>
+        <div class="identicationNo">{{userInfo.Token}}</div>
+        <div class="identication">Identification Number</div>
+        <div class="testdate">2022/11/11</div>
+        <div class="date">Test Date<br> (yyyy/mm/dd)</div>
+        <div class="listening">
+          <div class="part-score-title">
+            LISTENING
+          </div>
+          <h4>
+            <div class="score">
+              <div class="score-number">{{userInfo.ListeningScore}}</div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-indicator"></div>
+                <div class="max">
+                  495
+                </div>
+                <div class="min">
+                  5
+                </div>
+              </div>
+            </div>
+          </h4>
+
+        </div>
+        <div class="reading">
+          <div class="part-score-title">
+            READING
+          </div>
+          <h4>
+            <div class="score">
+              <div class="score-number">{{userInfo.ReadingScore}}</div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-indicator"></div>
+                <div class="max">
+                  495
+                </div>
+                <div class="min">
+                  5
+                </div>
+              </div>
+            </div>
+          </h4>
+        </div>
+        <div class="totalscore">
+          <div class="part-score-title">
+            TOTAL<br>
+            SCORE
+          </div>
+          <h1>
+            <div class="total-score">
+              <div class="total-score-number">{{userInfo.ListeningScore + userInfo.ReadingScore}}</div>
+            </div>
+          </h1>
+        </div>
+        <div class="birthday">{{userInfo.DateOfBirth}}</div>
+        <div class="birthtext">Date of Birth<br> (yyyy/mm/dd)</div>
+        <div class="validuntil">3000/11/11</div>
+        <div class="validtxt">Valid Until<br> (yyyy/mm/dd)</div>
+      </div>
+    </div>
+  </div>
+</div>

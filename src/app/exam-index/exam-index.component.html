@@ -1,0 +1,23 @@
+<div class="exam-container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row block-text-bold text-center">
+        TOEIC Practice(s)
+      </div>
+      <table class="table table-borderless exam-index" *ngIf="examList.length > 0">
+        <tbody>
+          <tr *ngFor="let exam of examList">
+            <td (click)="selectPratice(exam)"><i class="im im-file"></i> {{exam.Description}} - {{exam.Code}}</td>
+            <td><i class="im im-user-male"></i> {{exam.AlltimeCount==null? 0:exam.AlltimeCount}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="noRecord text-center" *ngIf="examList.length == 0">
+        No record found. Please visit later.
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>

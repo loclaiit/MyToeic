@@ -1,0 +1,36 @@
+<nav class="navigation-bar navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand col-lg-3" href="#">ToeicExam</a>
+    <div class="navigate-page col-lg-6" *ngIf="session.isTesting">
+      <div class="back-button my-auto" (click)="previousPage()" title="Go to previous page"><i class="im im-arrow-left"></i></div>
+      <div class="select-part">
+        <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            {{PartDescription}}
+          </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" (click)="changePart(1)">Part I - Picture Description</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="changePart(2)">Part II - Question Response</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="changePart(3)">Part III - Conversations</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="changePart(4)">Part IV - Short Talks</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="changePart(5)">Part V - Incomplete Sentences</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="changePart(6)">Part VI - Text Completion</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="changePart(7)">Part VII - Reading Comprehension</a></li>
+        </ul>
+      </div></div>
+      <div class="next-button my-auto" (click)="nextPage()" title="Go to next page"><i class="im im-arrow-right"></i></div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="session.isTesting">
+      <ng-container [counter]="session.remainSeconds" [interval]="1000" (value)="setValue($event)" class="timer">
+        <b>{{(hours|number:'2.0').substring(0,2)}}:{{(minutes|number:'2.0').substring(0,2)}}:{{(seconds|number:'2.0').substring(0,2)}}</b>
+      </ng-container>
+      <app-modal class="btn-finish"></app-modal>
+    </div>
+  </div>
+</nav>

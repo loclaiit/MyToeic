@@ -1,0 +1,18 @@
+@import '../../assets/styles/variable';
+#lblLoginStatus{
+  font-size: large;
+  color: $main-color;
+  font-family: Arial;
+}
+.row{
+  width: auto;
+}
+
+.panel-heading{
+  margin-top: 10px;
+}
+.container{
+  background-color: rgba($color: white, $alpha: 0.2);
+  padding: 10px 0px;
+  border-radius: 20px;
+}

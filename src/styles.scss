@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets//styles/variable';
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #ccc;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.block-text-bold{
+  font-weight: bold;
+  display: block;
+}
+
+.btn-primary{
+  background-color: $main-color;
+  border: none;
+
+}
+.btn-primary:hover{
+  background-color: $main-color;
+  opacity: 0.9;
+}
+.btn-outline-primary{
+  color: $main-color;
+  border: 1px solid $main-color;
+
+}
+.btn-outline-primary:hover{
+  background-color: $main-color;
+  // opacity: 0.9;
+}
+.btn-primary:focus{
+  background-color: $main-color;
+}
+
+.form-control:focus{
+  border-color: $main-color;
+  box-shadow: none;
+}

@@ -1,0 +1,277 @@
+.result-header {
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+}
+.logo{
+  position: absolute;
+}
+.logo .text{
+  font-size: 70px;
+  margin-left: 20px;
+  font-style: italic;
+  color: #003d7e;
+}
+.title {
+  width: 700px;
+  height: 200px;
+  background-color: #8c96b4;
+  border-radius: 60%;
+  padding-top: 10px;
+  display: inline-block;
+  z-index: 0;
+}
+.result-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.result-row {
+  height: 100%;
+}
+.im-user-male {
+  font-size: 150px;
+  color: #fff;
+  background-color: #c0c6d7;
+  // padding: 20px 2px 0 2px;
+  padding: 20px 0;
+  width: 100%;
+  height: 50%;
+  margin-top: 20px;
+}
+.avatar {
+  text-align: center;
+}
+.slogan{
+  font-style: italic;
+  font-weight: bold;
+  color: #003d7e;
+}
+.result-row {
+  background-color: #fff;
+  z-index: 99;
+  position: absolute;
+  width: calc(100% - 40px);
+  margin: -100px 20px 0 20px;
+  height: fit-content;
+  border: 5px solid #8c96b4;
+  text-align: left;
+  border-style: inset;
+  // min-height: 300px;
+}
+.part-score-title{
+  background-color: #8c96b4;
+  font-weight: bold;
+  display: inline-block;
+  padding: 2px 20px;
+  min-width: 130px;
+}
+
+.score{
+  padding-top: 10px;
+}
+.score-number{
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+  line-height: 80px;
+  display: inline-block;
+}
+.total-score{
+  padding-top: 50px;
+}
+.total-score-number{
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 100px;
+  display: inline-block;
+  font-weight: bold;
+}
+.result-body {
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: 20% 5% 15% 40% 20%;
+  grid-template-rows: 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "candidate candidate candidate listening totalscore"
+    "candidate candidate candidate listening totalscore"
+    "name . . listening totalscore"
+    ". . . listening totalscore"
+    "identicationNo identicationNo birthday listening totalscore"
+    "identication . birthtext reading totalscore"
+    "identication . birthtext reading totalscore"
+    ". . . reading totalscore"
+    "testdate testdate validuntil reading totalscore"
+    "date . validtxt reading totalscore"
+    "date . validtxt reading totalscore";
+}
+
+.container {
+  max-width: unset;
+}
+
+.candidate {
+  grid-area: candidate;
+  align-self: center;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.name {
+  grid-area: name;
+  align-self: center;
+  height: 100%;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding-left: 10px;
+}
+
+.identicationNo {
+  grid-area: identicationNo;
+  align-self: center;
+  height: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.identication {
+  grid-area: identication;
+  align-self: center;
+  height: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.testdate {
+  grid-area: testdate;
+  align-self: center;
+  height: 100%;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding-left: 10px;
+}
+
+.date {
+  grid-area: date;
+  align-self: center;
+  height: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.listening {
+  grid-area: listening;
+  align-self: center;
+  height: 100%;
+  border-left: 2px solid;
+  padding: 10px 0 0 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  text-align: center;
+}
+
+.reading {
+  grid-area: reading;
+  align-self: center;
+  height: 100%;
+  border-left: 2px solid;
+  padding: 10px 0 0 10px;
+  border-right: 2px solid #000;
+  text-align: center;
+}
+
+.birthday {
+  grid-area: birthday;
+  align-self: center;
+  height: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.birthtext {
+  grid-area: birthtext;
+  align-self: center;
+  height: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.validuntil {
+  grid-area: validuntil;
+  align-self: center;
+  height: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.validtxt {
+  grid-area: validtxt;
+  align-self: center;
+  height: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.totalscore{
+  grid-area: totalscore;
+  align-self: center;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.progress-bar-container {
+  height: 15px;
+  margin: 5px 50px 5px 30px;
+  background: none;
+  position:relative;
+  border: 1px solid;
+}
+.progress-bar-container .max{
+  position: absolute;
+  top: 0;
+  margin-top: -12px;
+  right: -45px;
+}
+.progress-bar-container .min{
+  position: absolute;
+  top: 0;
+  margin-top: -12px;
+  left: 0;
+  margin-left: -20px;
+}
+
+
+.progress-bar-indicator {
+  width: 100%;
+  height: 100%;
+  -webkit-mask:linear-gradient(#fff 0 0);
+          mask:linear-gradient(#fff 0 0);
+}
+.progress-bar-indicator::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-image: linear-gradient(to right, white, gray, black);
+}

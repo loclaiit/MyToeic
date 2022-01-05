@@ -1,0 +1,12 @@
+<h1 class="text-end text-center" *ngIf="pageType == 2">
+  END!
+</h1>
+<div>
+  <div class="btn btn-secondary" (click)="previousPage()" *ngIf="pageType != 1" >
+    Back
+  </div>
+
+  <div class="btn btn-primary" (click)="nextPage()" *ngIf="pageType != 2">
+    Next
+  </div>
+</div>
